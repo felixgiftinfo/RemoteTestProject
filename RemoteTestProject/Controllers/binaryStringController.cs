@@ -18,11 +18,11 @@ namespace RemoteTestProject.Controllers
     {
 
 
-        // POST: api/Companies
-        [HttpPost]
-        public IActionResult Post([FromBody] string value)
+        // GET: api/BinaryStrings/{binaryString}
+        [HttpGet("{binaryString}")]
+        public IActionResult Get( string binaryString)
         {
-            string result = this.ValidateBinaryString(value);
+            string result = this.ValidateBinaryString(binaryString);
 
             return Ok(result);
         }
